@@ -1,0 +1,25 @@
+AUTOCLICKER — PACOTE PARA GERAR O EXECUTÁVEL WINDOWS
+
+OBJETIVO
+O cliente final deve receber apenas AutoClicker.exe e poder abri-lo sem instalar Python ou bibliotecas. Este pacote contém a configuração para gerar esse executável.
+
+OPÇÃO 1 — COMPILAR EM UM PC WINDOWS
+1. Instale Python 3.12 ou mais recente no seu PC Windows (somente para compilar).
+2. Extraia este ZIP.
+3. Execute GERAR-EXE-NO-WINDOWS.bat e aguarde.
+4. O arquivo final será criado em dist\AutoClicker.exe.
+5. Distribua ao cliente somente AutoClicker.exe.
+
+OPÇÃO 2 — COMPILAR COM GITHUB ACTIONS
+1. Crie um repositório no GitHub e envie os arquivos deste pacote.
+2. Abra a aba Actions e habilite workflows, se solicitado.
+3. Selecione “Build Windows EXE” e clique em “Run workflow”.
+4. Quando terminar, abra a execução e baixe o artefato “AutoClicker-Windows”.
+5. Dentro do ZIP do artefato estará AutoClicker.exe.
+
+IMPORTANTE
+- Este ambiente de preparação é Linux, portanto não foi possível compilar nem testar um executável Windows nativo aqui. Este ZIP é o pacote de compilação, NÃO contém o EXE já compilado.
+- Antes de vender, teste o EXE em um computador Windows limpo, incluindo abertura, localização dos botões e parada de emergência.
+- As imagens seguindo.jpeg e confirmar.jpeg podem depender do idioma, escala e layout do navegador; talvez seja necessário atualizá-las.
+- A automação de ações em redes sociais pode causar restrições ou contrariar regras da plataforma. Não prometa ausência de bloqueios.
+- Nunca solicite nem armazene a senha do cliente.

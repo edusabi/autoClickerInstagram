@@ -1,0 +1,26 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependências
+        run: python -m pip install --upgrade pip pyinstaller -r requirements.txt
+      - name: Criar executável
+        shell: cmd
+        run: pyinstaller --noconfirm --clean --onefile --windowed --name AutoClicker --add-data "seguindo.jpeg;." --add-data "confirmar.jpeg;." script.py
+      - name: Publicar executável para baixar
+        uses: actions/upload-artifact@v4
+        with:
+          name: AutoClicker-Windows
+          path: dist/AutoClicker.exe
+          if-no-files-found: error
